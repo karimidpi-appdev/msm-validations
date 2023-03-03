@@ -22,4 +22,14 @@ class Movie < ApplicationRecord
 
     return the_director
   end
+
+  def director_name_or_uh_oh
+
+    if self.director != nil
+      return self.director.name
+    else
+      "Uh oh! We weren't able to find a director for this movie."
+    end
+  end
+
 end
